@@ -10,8 +10,8 @@ import java.time.LocalDate;
 @Entity
 public class Member {
     @Id
-    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
-    @GeneratedValue(generator = "aircraft_sequence")
+    @SequenceGenerator(name = "member_sequence", sequenceName = "member_sequence", allocationSize = 1, initialValue=1)
+    @GeneratedValue(generator = "member_sequence")
     private Long id;
     private String name;
     private String address;

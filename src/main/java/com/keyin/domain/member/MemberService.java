@@ -19,8 +19,8 @@ public class MemberService {
     }
 
     public Member findMemberById(long id) {
-        Optional<Member> aircraftOptional = memberRepository.findById(id);
-        return aircraftOptional.orElse(null);
+        Optional<Member> memberOptional = memberRepository.findById(id);
+        return memberOptional.orElse(null);
     }
 
     public Member findMemberByName(String name) {
