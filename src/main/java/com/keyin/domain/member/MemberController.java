@@ -22,17 +22,17 @@ public class MemberController {
         return memberService.findMemberById(id);
     }
 
-    @GetMapping("/members/search/{name}")
+    @GetMapping("/members/name/{name}")
     public Member getMemberByName(@PathVariable String name) {
         return memberService.findMemberByName(name);
     }
 
-    @GetMapping("/members/search/{phoneNumber}")
+    @GetMapping("/members/phone/{phoneNumber}")
     public Member getMemberByPhoneNumber(@PathVariable String phoneNumber) {
         return memberService.findMemberByPhoneNumber(phoneNumber);
     }
 
-    @GetMapping("/members/search/{startDate}")
+    @GetMapping("/members/date/{startDate}")
     public Member getMemberByStartDAte(@PathVariable String startDate) {
         return memberService.findMemberByStartDate(LocalDate.parse(startDate));
     }
@@ -48,8 +48,6 @@ public class MemberController {
     }
 
     @DeleteMapping("/members/{id}")
-    public void deleteMember(@PathVariable long id) {
-        memberService.deleteMemberById(id);
+    public void deleteMember(@PathVariable long id) {memberService.deleteMemberById(id);
     }
-
 }
