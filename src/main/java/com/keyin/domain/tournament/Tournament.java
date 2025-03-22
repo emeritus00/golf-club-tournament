@@ -4,6 +4,7 @@ import com.keyin.domain.member.Member;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,7 +21,7 @@ public class Tournament {
     private double cashPrizeAmount;
 
     @ManyToMany
-    private List<Member> participatingMembers;
+    private List<Member> participatingMembers = new ArrayList<>();
 
     public Long getId() {
         return id;
