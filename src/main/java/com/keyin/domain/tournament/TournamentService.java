@@ -26,12 +26,12 @@ public class TournamentService {
     }
 
 
-    public Tournament findTournamentByLocation(String location) {
-        return (Tournament) tournamentRepository.findByLocation(location);
+    public List<Tournament> findTournamentByLocation(String location) {
+        return tournamentRepository.findByLocation(location);
     }
 
-    public Tournament findTournamentByStartDate(LocalDate startDate) {
-        return (Tournament) tournamentRepository.findByStartDate(startDate);
+    public List<Tournament> findTournamentByStartDate(LocalDate startDate) {
+        return tournamentRepository.findByStartDate(startDate);
     }
 
     public void deleteTournamentById(long id) {

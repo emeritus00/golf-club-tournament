@@ -23,13 +23,13 @@ public class TournamentController {
         return tournamentService.findTournamentById(id);
     }
 
-    @GetMapping("/tournaments/search/{location}")
-    public Tournament getTournamentByLocation(@PathVariable String location) {
+    @GetMapping("/tournaments/location/{location}")
+    public List<Tournament> getTournamentByLocation(@PathVariable String location) {
         return tournamentService.findTournamentByLocation(location);
     }
 
-    @GetMapping("/tournaments/search/{startDate}")
-    public Tournament getTournamentByStartDate(@PathVariable String startDate) {
+    @GetMapping("/tournaments/date/{startDate}")
+    public List<Tournament> getTournamentByStartDate(@PathVariable String startDate) {
         return tournamentService.findTournamentByStartDate(LocalDate.parse(startDate));
     }
 
