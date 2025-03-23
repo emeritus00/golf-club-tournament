@@ -16,6 +16,8 @@ git clone https://github.com/emeritus00/golf-club-tournament.git
 cd golf-club-tournament
 ````
 2. Create Schema in MySQL
+- Update the MySQL local usersame and password in docker-compose.yml and create 'golf-club' database on MySQL or use bash command below to create database.
+
 ````bash
 CREATE DATABASE `golf-club`;
 ````
