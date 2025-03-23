@@ -5,6 +5,7 @@ A Spring Boot REST API for managing tournament members and tournaments.
 ## Prerequisites
 - Docker
 - Docker Compose
+- MySQL
 - Java 23 (for development)
 - Maven (for development)
 
@@ -14,14 +15,19 @@ A Spring Boot REST API for managing tournament members and tournaments.
 git clone https://github.com/emeritus00/golf-club-tournament.git
 cd golf-club-tournament
 ````
-2. Build, push to Docker Hub and run with Docker Compose locally
+2. Create Schema in MySQL
+````bash
+CREATE DATABASE `golf-club`;
+````
+
+3. Build, push to Docker Hub and run with Docker Compose locally
 ```bash
 docker build -t emeritus00/goft-club-tournament
 docker push emeritus00/goft-club-tournament
 docker compose up
 ```
 
-3. The API will be available at http://localhost:8080
+4. The API will be available at http://localhost:8080
 
 ## API Endpoints
 
